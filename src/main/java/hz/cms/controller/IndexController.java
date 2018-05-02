@@ -66,6 +66,7 @@ public class IndexController {
                 .signWith(SignatureAlgorithm.HS512, key)
                 .compact();
         model.put("a","aaaaaaa");
+        System.out.println("怎么滴");
         System.out.println(Jwts.parser().setSigningKey(key).parseClaimsJws(compactJws).getHeader());
         System.out.println(key.getFormat());
         int arr[][] =new int[3][3];
